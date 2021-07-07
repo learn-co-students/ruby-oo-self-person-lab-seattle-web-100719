@@ -1,3 +1,5 @@
+require 'pry'
+
 RSpec.describe 'Person' do
   let(:stella) { Person.new('Stella') }
   let(:blanche) { Person.new('Blanche') }
@@ -219,6 +221,7 @@ RSpec.describe 'Person' do
 
       it 'makes the friend happier by three points' do
         felix.happiness = 5
+ 
         penelope.call_friend(felix)
         expect(felix.happiness).to eq(8)
       end
